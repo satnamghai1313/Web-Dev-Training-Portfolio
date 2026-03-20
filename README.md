@@ -1,2 +1,10 @@
 # Web-Dev-Training-Portfolio
-Web Development portfolio containing UI modules (Bootstrap/CSS) and Backend Database connectivity tasks (Node.js) completed during Minor Training after 4th semester.
+
+This repository contains technical tasks and modular projects completed **after 4th semester** during my **Minor Industrial Training**.
+
+### 🛠️ Tech Stack:
+* **HTML5 & CSS3**
+* **Bootstrap 5** (Responsive UI)
+* **Node.js** (Backend & Database Connectivity Logic)
+
+> **Note:** This includes UI modules and demonstration of database connectivity tasks.
