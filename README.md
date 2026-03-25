@@ -7,4 +7,4 @@ This repository contains technical tasks and modular projects completed **after 
 * **Bootstrap 5** (Responsive UI)
 * **Node.js** (Backend & Database Connectivity Logic)
 
-> **Note:** This includes UI modules and demonstration of database connectivity tasks.
+> **Note:** This includes UI modules and demonstration of database connectivity tasks. It showcases my practical learning during the 45-day industrial training period.
