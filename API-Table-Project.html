@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- apply bootstrap -->
+     <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+     <style>
+        /* WEBSITES   FREE API'S WEBSITE CH EXPLORE BY CATEGORY CH  ANIMALSA CH DOGS CH  TRY IT OUT THEN EXECUTE KARKE IKK API MILLI https://dogapi.dog/docs/api-v2 EHNU COPY KRKE NAWE URL CH PAYEYA USMY DOG KI BREED,WEIGHT LIFE SAB AA GYA ..AS IT IS DOGS API..SIMILARY WEATHER API AND AUR ALAG ALAG API'S HOTY HEEIN...//RAPID API.COM = U GET DIFFERENT API'S TO PRACTICE 
+        GO TO WEBSITE OPEN IT CLICK ON API HUB AT LEFT CATEGORIES..THEY CAN BE FREE OR PAID.. */
+        /* E COMMERECE WEBSITE FREE API https://fakestoreapi.com/products ...I GOT THIS FROM E COMMERCE FREE API SEARCH ON GOOGLE THEN I WENT TO WEBSITE https://fakestoreapi.com/   AT LAST OF WEBSITE THEY HAD EXAMPLE CODE*/
+        /* WE WILL MAKE OUR OWN API AFTER  NODE JS.YAHAN SIRF USE KRNA SEEKH RAHE HEE */
+        /* eh style aapan table wali image te laya aa at the end..ehnu skip wi karr 
+        sakde aa */
+        img {
+            height: 80px;
+        }
+     </style>
+</head>
+<body>
+        <!-- Internet connection is must for console to print and fo j.s -->
+    <!-- NOW TO SHOW SAME 10 USERS KA JSON DATA API SE LIYA THAA JO DATA
+    IN TABULAR FORM  -->
+    <!-- TABLE CREATE KARKE AAPAN EH ID DE VICH USERSDATA LIKHNA WAA -->
+     <!-- <tbody id="usersData"></tbody> -->
+    <div class="container">
+
+    <button type="button" class="btn btn-primary" 
+    onclick="callAPI()">Call Api</button>
+
+      <!-- <table> -->
+
+      <table class="table table-bordered">
+         <!-- <table class="table table-bordered"></table>  this is written to set
+          outline around id,email and all headings..-->
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Address</th>
+                <th>Photo</th>
+                <th>Country</th>
+                <th>State</th>
+            </tr>
+        </thead>
+        <tbody id="usersdata"></tbody>
+        <!-- iske badh ka saara data tr and td wala part saara 
+         likha hee html+= ke andar for of 
+         wali loop mee -->
+      </table>
+      </div>
+     <!--  -->
+     <script>
+        function renderHTML(data){
+              var html = ``;    
+
+    //         for(var x of data){
+    //             html += `
+    //      <div class="col-md-3">
+    //     <div class="card">
+    //         <img src="${x.photo}" alt="">
+    //         <div class="card-body">
+    //             <!-- <h4>API JSON DATA PHOTO</h4> -->
+    //             <h5>${x.name}</h5>
+    //         </div>
+    //     </div>
+    // </div>`;
+            // }
+            for (var x of data){
+                html += ` <tr>
+                
+                    <!-- ABB KEYS KA NAAM CONSOLE SE DEKH KAR TD KE ANDAR ACCURATELY 
+                        LIKHNA HEE ALONG WITH SYNTAX ${x.KEYNAME} -->
+                <td>${x.id}</td>
+                <td>${x.name}</td>
+                <td>${x.email}</td>
+                <td>${x.phone}</td>
+                <td>${x.address}</td>
+                <!-- <td>${x.photo}</td>-->
+                  <!-- photo aaise sidha nahi aayegi img src tag ke andar likhan padega 
+                    iska src toh hi aayegi as i did below -->
+                <td> <img src="${x.photo}" alt=""></td>
+                <td>${x.country}</td>
+                <td>${x.state}</td>
+                </tr>`
+            }
+            document.getElementById(`usersdata`).innerHTML = html;
+        }
+        function callAPI(){
+            var url ="https://fake-json-api.mock.beeceptor.com/users";
+            
+           fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+            renderHTML(data)
+        })
+        }
+
+    
+  
+    </script>
+      </div>
+</body>
+</html>

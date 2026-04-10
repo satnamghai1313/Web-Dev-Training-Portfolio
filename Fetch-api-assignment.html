@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- apply bootstrap -->
+     <!-- <link rel="stylesheet" href="../bootstrap/css/bootstrap.css"> -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Internet connection is must for console to print and fo j.s -->
+        <!-- now using grid system we will show 3,4 cards in 1 row.so we will apply class named as row to  div id =userdata -->
+
+    
+    <button type="button" class="btn btn-primary" onclick="callAPI()">Call Api</button>
+    <!-- <div id="usersdata"></div> -->
+      <div id="usersdata" class="row">  </div>
+      </div>
+     <!-- yahan see ik pure card ko cut karke html+= wali loop mein paste krr diya hee hamnyy -->
+    
+        <!-- <div class="col-md-3">
+        <div class="card">
+            <img src="../laptop1.jpg" alt="">
+            <div class="card-body">
+                <h4>laptop image</h4>
+            </div>
+        </div>
+    </div>
+        <div class="col-md-3">
+        <div class="card">
+            <img src="../laptop1.jpg" alt="">
+            <div class="card-body">
+                <h4>laptop image</h4>
+            </div>
+        </div>
+    </div>
+        <div class="col-md-3">
+        <div class="card">
+            <img src="../laptop1.jpg" alt="">
+            <div class="card-body">
+                <h4>laptop image</h4>
+            </div>
+        </div>
+    </div>
+    abb aaise hi cards hamny banake aapna data nahi balki json data ko fit karna hee --> 
+    <!-- </div> -->
+
+    <!-- on click laga ke call api ko call kr ddete hee..on clcik means jab button
+     pe clcik hoga toh woh fxn ko call kardegaa call api naam ke fxn ko -->
+    <!-- API
+     URL1: https://fake-json-api.mock.beeceptor.com/users
+     URL: https://fakestoreapi.com/products -->
+     <script>
+        //function renderHTML(){
+            //iss fxn ko ham call karengy fetch url wale console ke neechyaur wahan pee
+           // uss data ko pass kadengy..abb hamny sabse pehly call api function banaya thaa usko ham call krr rahe hee jab iss button pe click kiya upar on click lagaya hee hamny phir sab jason parse hoke data mill gaya phir jo data milli api se uss data ko further ik aur fxn ko pass kar diya..uss fxn(renderhtml) ko call karke data wala array thaa jo console me dikh rha thaa woh pass kr diya render html ko
+        function renderHTML(data){
+            //abb data kya hee --array aur uske andar objects hee alag alag fo eg 
+            // [{id : "", name: "",phone_no: ""},{same fields as pishla object},{},{},{}]
+            // abb hamny issi array pee..data wale array pee loop lagani hee
+              var html = ``;    
+            for(var x of data){
+                //array pe hamesha for of loop lagta hee 
+                //10 baar loop chalta hee kyunki 10 object hee array mein in api data
+                html += `
+         <div class="col-md-3">
+        <div class="card">
+            <img src="${x.photo}" alt="">
+            <div class="card-body">
+                <!-- <h4>API JSON DATA PHOTO</h4> -->
+                <h5>${x.name}</h5>
+            </div>
+        </div>
+    </div>`;
+    // so hamny photo aur nam kra diya print 10 users kaa
+
+    // Ctrl + / shortcut nahi chalega template literal 
+    //      (\``
+        //  backtick wale string) ke andar agar tum: -->
+// JavaScript comment (//) lagane ki koshish kar rahe ho HTML line par
+// Kyunki template literal ke andar likha hua HTML JavaScript nahi hota, woh just ek string hai
+    // HTML ke andar (especially inside template literals using backticks `\), JavaScript-style comments like // don't work. That’s why your:
+    // <h4>API JSON DATA PHOTO</h4>
+   // is not a valid HTML comment, and browser just shows it as-is or breaks the layout.
+//   Use this instead:
+// <!-- <h4>API JSON DATA PHOTO</h4> -->
+    // SO  10 USERS KE CARD BAN GAYE HAMARE PASS <img src="${x.photo}" alt=""> YEH LIKHNE
+    // SEE
+            }
+            document.getElementById(`usersdata`).innerHTML = html;
+            //abb api se data jo mili hee use dikhane ke liyee div create karengy aur usko id dee deengy usersdata for eg..
+          
+            //console.log(data);
+//neechy wala console bandh kar diya call api fxn wala console..hamny kiya kya hee ki ik fxn se data dusry fxn mee pass kar diya hee console pe waise ee dikhega jaise pehly fxn akele ke saath thaa..abb doosre fxn ko pass iss liye kiya hee tanki data doosra fxn ko mill jaye aur woh fxn uska(data ka) html banake webpage pee dikha dee 
+        }
+        function callAPI(){
+            //take any url of api out of above 2
+            var url ="https://fake-json-api.mock.beeceptor.com/users";
+             //var url = "https://reqres.in/api/users"..eh wala chal nahi raha
+             // yeh key mangta hee hamsy...;
+            //api ka url is in string form so double quotes mee likha
+            //fetch api method now to call url of api.
+            //ispy request send krne ke liye fetch api method use karengee
+            //  fetch()//this is fetch method
+            //iss fetch method ko dena padta hee url jis api se aap data ko
+            //fetch karna chahte hoo.fetch will send request to api 
+           // fetch(url).then(()=>{})//yeh then method hee..abb then ke andar aap bracket mee
+           // phir e bracket or paranthesis laga ke phir curly braces lagao gee 
+         // so arrow fxn syntax is used here bina kisi naam ke sirf paranthesis then 
+         // arrow then curly braces
+         // abb is paranthesis ke andar ik paramter dena hee response
+         //Syntax
+        //  then((response) => {
+        // console.log(response)
+        //  })
+
+        //  fetch(url).then((response)=>{
+        //  console.log(response)
+        //  })   
+        //so above fetch(url) thing is just to show ok: true and status:200 actual mee ham jo neechy
+        //fetch(url) likha hee waisee likty heein
+         //abb yeh call api fxn hee yeh  khud toh chalega nahi is fxn ko
+         // call karna padega..so i will go in html and take a button i will write on button
+         //call api and type = button on click call api done above in body see
+        //  fetch(url)
+        // .then((response) => response.json())
+        // }
+           fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+            //abb yeh data kya print karega 
+            renderHTML(data)
+        })
+        }
+
+    
+  
+    </script>
+      </div>
+</body>
+</html>

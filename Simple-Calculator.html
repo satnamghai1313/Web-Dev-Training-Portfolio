@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 20.59 ton start -->
+ <!-- abb iss code ko thoda aur optimize kar lete heein..pehly values ko get kiya... but yeh line document.getElementById("output") baar baar repeat ho rahi hee..tino case mein..ham chahtee hee ki same lino of code naa hoo code ki length kam hoo..we want less lines and less time complexity as a result to do so what we did iss var num1= and var num2= wali line jo repeat ho rahi thii usko ek ee bar kar diya..abb output display wali line that i wrote above usko bahar lee jana he loop see..if else if esle wali loop ke last mein aur iss line ko har block mee see hata dengy individually....abb ham var result wale variable ko bhi if else se bahar lee aayenge starting mee if else kee..sirf var result bahar likha hee without any value inside it so variable without any value..abb hamny variable bahr declare kar liya hee toh ham var keyword ko tino operations mee se remove kar akty hee..abb var keyword ni baar baar likhne ki jarurat..abb var ko bahar likh diya hee jo bi result aa raha hee operation perform karne ke badh woh bas assign karwa rahee heein result mein(value)..aur jo bhi block chala aur jis  bhi value ka result wala row chala eh - ka chala... result = num1 - num2;...abb bas isko last mein display kara dete he ham document.getelementbyid wali line use kar kee...conditon wala if else alag hota hee..usme alag logic likhty hee if else wala in c/c++..if else toh isliyee lagaya hee naa ki aapne button konsa click kiya hee abb function ko kaise pata chalega ki user nee kis button pe click kiya hee...function ko batane kee liye if else lagaya hee..ki kis button pe click kiya hee aur uspe click hune pee value padd kar di hee (add,sub,mul)..yeh values fxn ko pass kar di hee...abb fxn ke andar jaa ke check karengee ki kis button pe click kiya hee...matlab kya value aayi hee aur uss valuee se identify karte hee ki kis button pe click huya hoga uske liye if else lagaya hee check karne kee liyee...check karna padega ki user ne kis button pe click kiya hee uss according fxn perform hoga isliye if else create kiya hee hamny...abb part 4 pe chalty hein july5 ke jo hee logical operators-->
+          
+
+
+<input type="text" placeholder="enter number 1" id="input1"> <br> <br>
+<input type="text" placeholder="enter number 2"id="input2"> <br> <br>
+ 
+  <button type="button" onclick="calculate2('add')">+</button>
+  <button type="button" onclick="calculate2('sub')">-</button>
+  <button type="button" onclick="calculate2('mul')">*</button>
+<p id="output"></p>
+
+
+    <script>
+function calculate2(action){
+                var num1 = parseFloat(document.getElementById("input1").value);
+          var num2 = parseFloat(document.getElementById("input2").value);
+            var result;
+          if(action == "add"){
+              //var result = num1 + num2;
+              result = num1 + num2;
+
+            //document.getElementById("output").innerText = "RESULT :" + result;
+        } else if(action =="sub"){
+
+              //var result = num1 - num2;
+               result = num1 - num2;
+
+            //document.getElementById("output").innerText = "RESULT :" + result;
+        }
+        else{
+                          //var result = num1 * num2;
+                           result = num1 * num2;
+
+            //document.getElementById("output").innerText = "RESULT :" + result;
+        }
+        document.getElementById("output").innerText = "RESULT :" + result;
+    }
+        
+
+    </script>
+    
+</body>
+</html>        

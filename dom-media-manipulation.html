@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* sidha attribute ka naam likh ke uss pee bi sidha styling lag jati hee */
+        /* tag slector kenhe aa ehnu sidha tag da naam de dita*/
+        video{
+            width: 600px;
+        }
+        img{
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+   <H1 id="heading1">HELLO MITRO</H1>
+    <button type="button" onclick="name_of_fxn()">
+        <!-- dont forget applying () after writing the name of fxn -->
+        Call Function
+    </button>
+    <hr>
+    <!-- abb yeh khali div ke andar heading,paragraph add karna hee woh kaise karengy with j.s so go to j.s file july1_fxns wali now -->
+    <div id="block"></div>
+     <button type="button" onclick="DisplayHTML()"> Display HTML code
+        <!-- dont forget applying () after writing the name of fxn -->
+    </button>
+    <hr>
+    <!-- abb agar image ko change karwana hee toh..replace by new image from j.s karna hee toh -->
+     <!-- <img src="laptop1.jpg" alt=""> -->
+      <!-- upar wala is without ../ toh image display nahi hogi kyunki vo js ke folder se bahar hee web development ke folder mee aur yeh html file jispe ham kam kar rahe heein yeh hava script ke andar hee isliyee hamee ../ lagana padega img ko display karwane kee liyee jab bhi aaisa case arise hoo..SO AGAR IK FOLDER BAHAR JANA HEE TOH ../ AUR AGAR 2 FOLDER BAHAR JANA HEE TOH ../../ LIKHNA THAA(TECHINCAL NAMES ROOT DIRECTORY MAIN WEBDEVELOPMENT WALA FOLDER AND SUB DIRECTORY(ANDAR WALA FOLDER ie J.S) -->
+     <img src="../laptop1.jpg" alt="" id="image"> <br>
+     <button type="button" onclick="imageChange()">Change Image</button>
+     <br> <br>
+<!-- abb image ko replace by new image from j.s karna he toh pehly id dengy ham image ko -->
+ <!-- document.getElementById('heading1').innerText="Hello Satnam";
+ document.getElementById('heading1').innerText="HELLO MITRO. THEEK OO?";
+ document.getElementById('heading1').style.color="red"; -->
+    <!-- to embedd logic.js file here.as it is external file. we will use below written attribute to embedd -->
+     <!-- to add video in html -->
+      <!-- <video src="../sample video.mp4"></video> -->
+      <!-- upar wale naal sirf video aayego chalegi nahi.chalon layi controls attribute likhna pena aa neechy -->
+      <!-- <video src="../sample video.mp4"controls id="video"></video> 
+       <br> -->
+       <br>
+       <!-- video ko autoplay j.s ke kar sakty hein.j.s ka code hoga uska -->
+        <!-- video agar server pee hosted hoo toh autoplay chal jaata hee.host matlab server pee padhi huni chahiyee video.jaise yeh video hamary system pee padhi huyi hee..yeh kisi server pee padha huya aur uss server pe url dengy toh chal sakta hee autoplay..abhi local pdha hee shayad toh nahi chal raha hee -->
+      <video src="../sample video.mp4"controls id="video"controls loop></video> <br>
+      <!-- IF WE WANT VIDEO IN LOOP TOH CONTROLS LOOP LIKHNA PADEGA.LOOP ATTRIBUTE LAGEGA ISPEE -->
+      <button type="button" onclick="videoChange()">Video Change</button>
+      <!-- now lets replace video with another in j.s. -->
+       <br>
+       <!-- sample audio. -->
+       <!-- <audio src="../sampleaudio.mp3"controls></audio> <br> -->
+        
+       <audio src="../sampleaudio.mp3"controls loop></audio> <br>
+
+       <!-- YOUTUBE VIDEO LAGANI HEE TOH KOI TAG KUSH NI LAGANA SIDHA EMBED VIDEO KARKE LINK COPY KARKY YAHAN PASTE KAR DENA HEE AUR KUSH NAHI KARNA...CONTROLS YOUTUBE KE INBUILT LAGENGY..KHUD KE UNKE LAGENGY -->
+        <HR>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0c3Ix92jQwM?si=LeVPhgjVDrwEFjU7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      
+    <script src="july1_fxns.js"></script>
+</body>
+</html>

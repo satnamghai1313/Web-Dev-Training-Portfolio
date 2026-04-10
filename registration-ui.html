@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+</head>
+<body>
+    <!-- KAL WALE LECT MEE HAM VALUES KO GET KARKE USKI  TYPECASTING KAR RAHEE THEE MATLAB DATA TYPE USKE ANDAR KA CHANGE KARR RAHEE THEE AB  YAHAN PEE DATA TYPE CHANGE KARNE KI JARURAT NAHI HEE KYUNKI KOI OPERATION NAHI PERFORM KARNE JAA RAHEIN INPY HAM..HAAM IN VALUES KO BAS GET KARNA CHAHTY HEE AUR USKY BADH HAMNY ISKO SUBMIT/SAVE KARNA THAA..BACKEND pee USKE LIYE NO NEED TO CHANGE DATATYPE -->
+     <!-- Bahut badiya sawaal bhai!
+JavaScript mein Typecasting ka matlab hota hai:
+Ek data type ko doosre data type mein convert karna. -->
+
+
+
+        <!-- we linked bootstrap now see above in head..we will create form and uss form se values uthayengee..user se uska naam email id and password enter karwayengee...-->
+         <div class="conatiner">
+            <form>
+                <!-- <div class="mb-3"> -->
+                    <label>Full Name</label>
+                    <input type="text" class="form-control">
+                </div>
+            </form>
+         </div>
+
+
+         <!-- using grid system lets make form smaller -->
+    <div class="conatiner">
+        <div class="row justify-content-center">
+        <div class="col-md-6 mt-3 shadow-lg p-4">
+            <!-- shadow-lg is to apply shadow -->
+            <form>
+                <div class="mb-3">
+                    <label>Full Name</label>
+                    <input type="text" class="form-control" id="FullName">
+                </div>
+                 <div class="mb-3">
+                    <label>Email</label>
+                    <input type="email" class="form-control" id="email">
+                    </div>
+            
+             <div class="mb-3">
+                    <label>Password</label>
+                    <input type="password" class="form-control" id="password">
+         </div>
+         <!-- <button class="btn btn-primary"> -->
+            <!-- Isme sirf class diya gaya hai, lekin type specify nahi kiya gaya.🔸 Default behavior:
+Agar yeh <form> ke andar likha gaya hai, toh yeh type="submit" maana jayega.
+Matlab yeh form ko submit kar dega jab user is button pe click karega. -->
+             <button type="button" onclick="formkosubmit()" class="btn btn-primary">
+                <!-- Isme type="button" diya gaya hai. -->
+                 <!-- hamny onclick event laga diya..jab user button pe click karega toh onclick event chalega hamara.aur onclick event se hamara diya huya function chala aur uss fumction se ham teeno input tags se(name,email,password) values ko get karenge...abb id laga dety hein tino input tags par -->
+<!-- 🔸 Behavior:
+Yeh button kisi bhi form ko submit nahi karega.
+Yeh sirf ek normal clickable button hoga — jisko aap JavaScript se koi bhi kaam karwa sakte ho. -->
+            Submit
+         </button>
+        </form>
+        </div>  <!-- col-md-6 mt-3 shadow-lg p-4 wala div bandh kiya hee -->
+        </div>  <!-- row justify-content-center -->
+        </div>  <!-- container -->
+         
+        
+         <!-- abb jab user ne all 3 values of above form bhar di ham unn values ko uthayengee kaisee..server pee vales bhejne see pehly..server pe bhejne se pehly..server pe jayega toh databse mee store hogi values..but yeh values uthayengee kaise jaise kal kiya thee kyunki input tag hi hee-->
+          <!-- kal wala lecture mein we were getting numbers from input tag ...now we will get values from input tag..tareka same hi hee
+           
+          hamny onclick event laga diya..jab user button pe click karega toh onclick event chalega hamara.aur onclick event se hamara diya huya function chala aur uss fumction se ham teeno input tags se(name,email,password) values ko get karenge...abb id laga dety hein tino input tags par...abb j.s ke function ke andar means jo script mein function likha hee  yeh wala-> function formkosubmit() {
+                var FullName =document.getElementById('FullName')...issi function ki id ke base pe uski value ko get karky var fullname me send kardu ga-->
+           <script>
+            function formkosubmit() {
+                var FullName =document.getElementById('FullName').value
+                var email =document.getElementById('email').value
+                var password =document.getElementById('password').value
+                // email toh id ho gya...aur yeh document.getElementById('email') jo return karwayega usse variable mein store karwana hee
+                // var email kyunki jo bi return karwana hee woh var email mein store hoga.
+//                 | Mistake                              | Fix                         |
+// | `document.getElementById(...)`       | ❌ gives element object only |
+// | `document.getElementById(...).value` | ✅ gives actual input value  |
+
+console.log(FullName,email,password);
+//multiple values in console.log by separating all 3 variables by comma
+  } 
+            // so during login or registration form making ham form ee see aaisy values ko uthaty hee..values ko get karky hamny server ko pehly bhejna hota hee woh aaisy karty hee ham....innertext webpage ke andar output dikhane ke liyee thaa but console ke liye jo abb kiya hee waise hi
+
+            // NEXT STEP HE VALUES KO SERVER PEE BHEJNA....JAB NODE J.S PADHENGY AUR DATABASE KARLENGY TAB HAM YEH JO 3 VALUES KO MAINE GET KIYA HEE FullName,email,password YEH AAPNE BACKEND KO SEND KARDENGY..AUR BACKEND MEIN LOGIC LIKHDENGY DADTABASE MEIN STORE KARWNAY KAA....SERVER PE VALUES BHEJNE KE LIYE HAM API'S KO CALL KARENGY TOH API PEHLY BANAYE GEE NODE JS KE ANDAR .AUR SATH MEIN DATABASE BI KARNA HOGA TAB HAMMY....TOH YEH USER KI 3 VALUES DATABASE MEI JAA KE STORE HOJY GI..TOH CIENT END WALA PART HALF KAR LIYAA HEE HAMNY...KI CLIENT END PEE...KAHAN PE USER NE AAPNA FORM BHARNA HEE WAHAN SE VALUE KO KAISE GET KARNA HEE
+           </script>
+</body>
+</html>
