@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <!-- HUN AAPAN JO FORM BANAYA AA USS NU RESPONSIVE BANONA AA.KYUNKI SMALL SCREEN TE VERTICAL FORM KHARAB LAGDA AA..MATLAB KI JEDHA VERTICAL FORM DE VICH SII...ASSI CHOHNY AA KI IN MOBILE SCREEN JADO HORIZONTAL FORM DI WIDTH SHOTI HOWY TAN OH AAPE HI VERTICAL FORM DE VICH CONVERT HOO JAWY AAPY..md-SO SMALL SCREEN LAYI HAR FORM NU VERTICALY HI BANONA PAINDA AA -->
+     <!-- HUN COL-2,COL-10 TY BAKI COL SAB SCREENS LAYI FIX HO JANDE AA JADO TAK ASSI EH NAHI LIKHDE "COL-MD-10"...EDHA MATLAB AA KI MD JAN USS TON UPAR WALI SCREEN LAYI  -->
+     <!-- EH 2 AUR 10 MEIN SPLIT HOGA(MATLAB IKO ROW DE VICH LABEL TY TEXT BOX) AUR MD KE NEECHY WALY MEE..YEH PHIR 12 MEIN AA JAYEGA.(MATLAB UPAR LABEL NECHY TEXT BOX).MATLAB 768 TON THALLY WALE CH EH VERTICAL FORM HI BANGEYA SAADA..PAR 768 TE USS TON WADH WALI WIDTH DE VICH OH WAPAS HORIZONTAL FORM CH CHANGE HO JAYEGA TY PHIR JINHI MARJI WIDTH WADHA DAWO OH ODA HI RAHEGA -->
+     <div class="container">
+        <H1>VERTICAL FORM</H1>
+        <hr>
+        <form class="bg-primary p-3">
+            <div class="mb-5">
+            <!-- p-3 is padding 3 from all sides -->
+            <label>label 1</label>
+            <input type="text" class="form-control">
+            </div>
+
+            <div class="mb-4">
+            <label>label 2</label>
+            <input type="text" class="form-control">
+            </div>
+
+            <div class="mb-5">
+            <label>label 3</label>
+            <select name="" id="" class="form-select">
+                <option value="">Select Option</option>
+                <option value="">A</option>
+                <option value="">B</option>
+            </select>
+            </div>   
+            <div class="mb-3">
+                <label>Label 4</label>
+                <textarea class="form-control"></textarea>0
+    </div>
+            <div class="mb-3">
+
+    <button >Submit</button>
+    <button class="btn btn-danger">Submit</button>
+    <button class="btn btn-secondary">Submit</button>
+    <button class="btn btn-info">Submit</button>
+    <button class="btn btn-primary">Submit</button>
+    <button class="btn btn-light">Submit</button>
+    <hr>
+    <button class="btn btn-outline-danger">Submit</button>
+    <button class="btn btn-outline-secondary">Submit</button>
+    <button class="btn btn-outline-info">Submit</button>
+    <button class="btn btn-outline-primary">Submit</button>
+    <button class="btn btn-outline-light">Submit</button>
+            
+       </div>
+    
+    </form>
+    <hr>
+<h1>Horizontal Form</h1>
+<hr>
+<form class="bg-info p-3">
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <!-- 2 width  ke andar label hee aur input ham 10 ke andar rakhte hee 
+             tanki dono ik row mein ik saath dikhein-->
+        <label>Label 1</label>
+    </div>
+       
+             <div class="col-md-10">
+
+        <input type="text" class="form-control">
+        </div>
+        </div> 
+
+<!-- NEW ROW STARTED -->
+         <div class="row mb-3">
+        <div class="col-md-2">
+        <label>Label 2</label>
+    </div>
+             <div class="col-md-10">
+        <input type="text" class="form-control">
+        </div>
+        </div>
+        <!-- NEW ROW STARTED -->
+         <div class="row mb-3">
+            <!-- EH ROW WALA DIV END TE BAND KARNA AA LABEL TY INPUT DONO  -->
+            <!-- EDY VICH LIKH KE -->
+        <div class="col-md-2">
+        <label>Label 3</label>
+    </div>
+             <div class="col-md-10">
+             
+
+        <input type="text" class="form-control"> 
+        <!-- <br> -->
+        <button class="btn btn-success mt-3">Submit</button>
+        <!-- iss div tag ke neechy button rakha hee maine so extreme left se shuru nahi hoga woh text bar ke neechy  hi aayega submit button -->
+
+        </div>
+        </div>
+        <button class="btn btn-success">Submit</button>
+
+<div class="row">
+    <!-- ik row banaya te buttons nu width de diti aapan 10..eh 10 start ton shuru howega..left side di starting ton..bhaiven width 10 aa par start tan har cheej extreme left ton ee hundi aa.....ham chahty hein ki submit 2 columns ko shod ke aagy sy start hoo...uske liye offset class lagate hee...offset vohi 2 columns ka space starting se leave kr dee gaa...start wale 2 column ka space leave kar ke shod ke phir start karega column...so we created gap of 2 columns from starting and  gave 2 value of md as 2 columns ka space banana hee hamko..aur column ko width mil raha hee 10..so jitho white box shuru hunda aa uss ton whit box end tak 10 aa..md see neechy offset work nahi karega matlab agly element jidhi aapan width deni aa oh start ton hi width shuru howegi...offset position ton nahi...offset works with all screen sizes in Bootstrap (sm, md, lg, xl) -->
+             <div class="offset-md-2 col-md-10">
+             <!-- <div class="offset-md-3 col-md-10"> -->
+                <button class="btn btn-success">submit</button>
+
+
+    </div>
+</div>
+</form>
+<hr>
+<br><br><br><br>
+<!-- BUTTON ASSI CHOHNE AA KI JIS LINE CH INPUT TEXT SHURU HOYE AA USSY LINE DE START TON SHURU HOWY SUBMIT BUTTON -->
+
+<H1>CUSTOM FORMS</H1>
+<!-- CUSTOM FORM WI RESPONSIVE WAA BELOW 768 PX OH VERTICAL FORM CH CONVERT HO JANDA WAA -->
+ <!-- label 1 utte aa ty text box neechy aa tan karke aapan..tan karke aapan iko wari col-6 ditaa aa..so aapan 2 sections ch divide kita hoyeya aa ohnu -->
+ <!-- horizontal form ch label1 te text bar iko line ch hegy sii tan karke asi label di width alag diti aa te text box di alag width diti aa -->
+<form class="bg-primary p-3">
+    <div class="row">
+        <!-- 2 COLUMNS MEIN EQUALLY SPLIT KARNA HEE TOH 6,6 KA KARDE GEE.. -->
+         <!-- SHORTCUT .col-md-6 to get below class -->
+        <div class="col-md-6 mb-3">
+        <!-- <div class="col-sm-6 mb-3"> -->
+            <!-- sm bein jab 576 se kam value karengy toh vertical form jaisa banega otherwise jaisa hamne diya hee values waise hi rahega 576 pe and above 576 -->
+        <label>Label 1</label>
+        <input type="text" class="form-control">
+        </div>
+        <div class="col-md-6 mb-3">
+        <!-- <div class="col-sm-6 mb-3"> -->
+            <label>Label 2</label>
+        <input type="text" class="form-control">
+        </div>
+        </div>
+<div class="row">
+    <!-- we gave column width of 4 to divide in 3 parts -->
+    <div class="col-md-4 mb-3">
+    <!-- <div class="col-sm-4 mb-3"> -->
+        <label>Label 3</label>
+        <input type="text" class="form-control">
+    </div>
+    <div class="col-md-4 mb-3">
+    <!-- <div class="col-sm-4 mb-3"> -->
+        <label>Label 4</label>
+        <input type="text" class="form-control">
+    </div>
+    <div class="col-md-4 mb-3">
+    <!-- <div class="col-sm-4 mb-3"> -->
+        <label>Label 5</label>
+        <input type="text" class="form-control">
+    </div>
+</div>
+<div class="row mb-3">
+    <!-- label 6 de neechy jedha duja white box aa ohde thally margin layea aa -->
+    <div class="col-12">
+        <!-- vertical form ch aapan col-12 nahi lagay si..eh nahi wi lawangee tan wi chal ju ga...verical form ch grid system ki jarurat nahi hoti..jab ik row mein ik cheej aa rahi hee voh bina grid system ke bi ban sakta hee...but agar ik row mein 2 cheejy chahiyee toh grid system ka use karna padta hee..ki ik row ke andar 1st column ko itna width milega aur 2nd column ko itna width milega -->
+        <label>Label 6</label>
+        <input type="text" class="form-control"> <br>
+         <textarea class="form-control"></textarea>
+         <!-- TEXT AREA LAUN NAAL EXTEND KARAN DA SYMBOL AA GEYA BOTTOM RIGHT TE -->
+    </div>
+</div>
+<!-- eh neeche duja tarika aa label ty input text banon da without usage of col-12..sirf label,input type te class likheya aa aapan -->
+<div class="mb-4">
+            <label>label 6</label>
+            <input type="text" class="form-control">
+            </div>
+
+<button class="btn btn-danger">Submit</button>
+</form>
+
+
+
+
+
+<hr>
+</body>
+</html>

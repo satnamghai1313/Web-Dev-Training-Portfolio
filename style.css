@@ -1,0 +1,87 @@
+a{
+    text-decoration: none;
+}
+a :hover
+{
+    text-decoration: underline;
+}
+a{
+    text-decoration: none;
+    font-size: 12px;
+}
+a :hover
+{
+    text-decoration: underline;
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+}
+a :hover
+{
+    text-decoration: overline;
+}
+ul
+{
+    list-style-type: circle;
+}
+ul{
+     list-style-image: url("student1.webp");     
+}
+table,tr,th,td{ 
+    /* table naal outer border aayega,t row ch wi aayega,cell de vich wi aayega */
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+/* assi sirf table di width nu 1000px chohne aa tan karke assi table de under width 1000px
+likhi aa ..tr,th,td di assi 1000px nahi chohne */
+/* baki cell khud hi adjust hojayengy width wise..bas table ko hi width deni padegi */
+/* so uncommon cheej ko alag rakh sakte heein */
+table 
+{
+    width:1000px;
+}
+/* h1{
+    padding-top: 10px;
+    padding-left: 2px;
+    padding-bottom: 15px;
+    padding-right: 20px; */
+/* } */
+h1
+{
+  padding: 2px 10px 15px 20px;  
+  /* this is top,right,bottom,left(by default clockwise direction of padding)  */
+  /* padding: 2px 10px (here 2px top ty bottom di and 10 px left ty right di) */
+  /* padding: 2px (here 2px value for top,bottom,right,left)  */
+}
+body
+/* or */
+ *
+ /* asteric(*) is same as body */
+{   font-family 'times new roman',
+    /* <!-- (3 words ko single quote me dalna hota hee) -->
+     <!-- agar ek word ho toh noh need of single quote --> */
+      verdara,sans-serf
+}
+h1
+{
+font-weight:bold/bolder;
+font-weight 100;
+margin-left 1px;
+margin-right 10px;
+margin-top 25px;
+margin bottom 25px;
+}
+table
+{
+width: 100%;
+}
+table,th,td
+{
+    border: 1px solid green;
+}
+th,td
+{
+    padding: 2px;
+}

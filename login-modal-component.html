@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <!-- above link is for only  external css file  ko aapny html mein embedd karne ke liyee usage of above link rel where  no j.s was involved -->
+    <!-- abb hamy bootstrap jo hamny download kiya hee uski java script file bi link karni padegi tanki modal chal saky..(the pop up box modal thing to work) hamy yeh karna padega  -->
+     <!-- now to link external j.s file..usko embedd karne ke liyee aapko script tag use karna hee aur usmy src attribute lagana hee..script is a pair tag..src ke andar j.s ki file ka path dena hoga hamee -->
+      <script src="bootstrap/js/bootstrap.bundle.js"></script>
+      <!-- "bootstrap/js/bootstrap.bundle.js"..bundle.js hega aa naa ki simple bootstrap.js -->
+</head>
+<body>
+    <!-- go to this website -->
+    <!-- https://getbootstrap.com/docs/5.2/getting-started/introduction/ -->
+     <!-- it is a bootstrap website..in components section on left side we have one option named as Modal..bootsrap ch card,button te baki cheeja jo aapan kitiya aa onha sab da code wi edhy vich hi hega aa iss website de vich -->
+<div class="container">
+    <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#loginlayimodal">
+        <!-- eh dono classes j.s nu target kardiya aa jis wajah naal modal dikhda aa -->
+         <!-- HUN EH OPEN MODAL TE CLICK KARAN TE USER LOGIN WALA POP UP AA GEYA..HUN EH OPEN KIWEN HOYEYA AA EH DO CHEEJA KARKE HOYEYA AA..2 ATTRIBUTES ARE BEING USED THAT IS BS TOGGLE AND BS TARGET -->
+        <!-- HAMY TOGGLE KO MODAL KE LIYE USE KARNA HEE ISS LIYE HAMNY JO CLASS=MODAL HEE WOHI WALA  MODAL LIKHA HEE DATA BS TOGGLE = MODAL MEE..BUTTON KE CLICK KARNE PEE KIS MODEL KO OPEN KARNA HEE HAMNY WOH DATA-BS-TARGET MEIN BATATE HEEIN KI KONSE MODAL KO TARGET KARNA HEE..agar multiple modals use hoo rahein hee aapke page mein toh..so hamny neechy code mein id di thii div class = modal ke saath..aur wohi id aapne target wale attribute mein hash laga kee likh dena hee..same id ...SO USMY HASH LAGAKE ID KO POINT KARNA HEE.NAAM APNE ACCORDING LIKH SAKTE HO WAHAN PEEE. -->
+         <!-- DATA BS TOGGLE KYA KARTA HEE....MODAL KO DISPLAY KARATA HEE..BY DEFAULT MODAL HIDE HOTA HEE..MODAL NAHI DIKHTA BY DEFAULT HAMME...TOGGLE KO CLICK KARNE PEE DIKHTA HEE TOH DATA BS TOGGLE....MODAL KO DISPLAY KARWATA HEE -->
+        <!-- jis button pe click karne pee usko open karwana hee..kyunki multiple modals hee toh multiple modals bi honge unko alag lag ko open karne kee liyee toh aapko uss button pe jana hee aur uspe likhna hee data-bs- toggle jo upar likha hee mainee -->
+        
+    Open Modal 
+</button>    
+</div>
+<!-- Modal ke code   ka html page ke last pee jaa ke likhna hee.jahan body tag close ho raha ee just uske upar -->
+ <!-- modal,modal-dialog,modal-content..eh tino classes launiya jaruri aa modal baon layi -->
+
+ <!-- HUN MODAL OPEN KIWE KARNA AA TO DO SO AAPKO IK ID DENI HEE CLASS= MODEL KE SAATH -->
+ <!-- jo main div thaa uske saath id deni hee..uss id see usi model ko open karwayengee ham-->
+  <!-- we sometimes make multiple modals in a page...alag alag form ke liyee alag alag notification dikhane ke liyee..toh konsa modal open karna hee woh id se pata lagta hee -->
+
+ <!-- ETHO SHURU HO KE END TAK MODAL DA CODE HI AA -->
+ <!-- <div class="modal" id="loginlayimodal"> -->
+    <!-- fade word likhan naal slide hoke aawegi oh animation type ban jau gaa pop up form aa joo -->
+ <div class="modal fade" id="loginlayimodal">
+    <!-- <div class="modal-dialog"> -->
+        <!-- AGAR MODAL KO CENTER MEIN DISPLAY KARWANA..MATLAB CENTER SE START HOO TOH  CHAHTY HEEIN TOH modal-dialog-centered laga dena hee dialog ke saath -->
+    <!-- <div class="modal-dialog modal-dialog-centered"> -->
+    <!-- <div class="modal-dialog modal-lg modal-dialog-centered"> -->
+        <!-- using lg wala attribute increases the width of modal -->
+<!-- FULL SCREEN MODAL BANAE KE LIYE CODE LG KE BADH MODAL-FULLSCREEN LIKH DEE GEE -->
+    <div class="modal-dialog modal-lg modal-fullscreen modal-dialog-centered">
+        <!-- ABB FULL SCREEN SE BAHAR SIRF BUTTON WALE PAGE PE KAISE JAYENGE.TOH WE WILL GIVE CROSS BUTTON TO CLOSE MODAL..WAISE MODAL KE BAHAR POP UP KE BAHAR KAHIN BI CLICK KARO TOH BI BANDH HO JATA HEE MODAL -->
+         
+
+    <!-- <div class="modal-dialog modal-dialog-centered"> -->
+        
+        
+        <div class="modal-content">
+        <div class="modal-header">
+            <!-- HEADER KE NEECHY TITLE ADD KIYA THAA HAMNY USSI KE NEECHY CLOSE KA BUTTON LAGA DENA HEE HAMKO -->
+            <h4>User Login</h4>
+            <!-- BTN CLOSE SE CROSS KA NISHAN BAN JATA HEE..CROSS PE CLICK KARTE HI HAM CHAHTE HEE KI MODAL HIDE HO JAYE HAMARA USKE LIYE DISMISS WALA ATTRIBUTE HEE HAMARY PASS..= MODEL LIKHA HEE KYUNKI MODEL KO DISMISS KARNA HEE -->
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <!-- YEH CODE HAMNY BOOTSTRAP KI WEBSITE MEIN EXAMPLES MEIN JAA KE PEHLI EXAMPLE SE COPY KIYA HEE -->
+            <!-- aria-label="Close"..eh bhaiven delete kardo koi ni fayida aa edha -->
+            
+            
+      </div>
+        
+            <!-- modal-header adds title of the modal -->
+             <!-- so header ke anddar bas title hi dena hee hamee -->
+        <!-- modal has modal header,body,footer.but we will use 2 -->
+<div class="modal-body">
+    <!-- body ke andar actual content jo dikhana hee..koi notification jan koi form bana rahe ho woh bna sakte hoo -->
+     <form>
+        <!-- yeh form dialog box ke andar dikhega form..BODY KE ANDAR FORM BNA LIYA HE HAMNE  -->
+         <div class="mb-3">
+            <label>Email</label>
+            <input type="email" class="form-control">
+         </div>
+         <div class="mb-3">
+            <label>Password</label>
+            <input type="password" class="form-control">
+         </div>
+         <button class="btn btn-primary">Submit</button>
+     </form>
+</div>
+    </div>
+    </div>
+ </div>
+
+
+</body>
+</html>
